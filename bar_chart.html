@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+<head>  
+<script>
+window.onload = function () {
+
+var chart = new CanvasJS.Chart("chartContainer", {
+     animationEnabled: true,
+     theme: "light2", // "light1", "light2", "dark1", "dark2"
+     title:{
+          text: "Student In Different State"
+     },
+     axisY: {
+          title: "Student"
+     },
+     data: [{        
+          type: "column",  
+          showInLegend: true, 
+          legendMarkerColor: "grey",
+          legendText: "States",
+          dataPoints: [      
+               { y: 300878, label: "Maharashtra" },
+               { y: 266455,  label: "Madhyapradesh" },
+               { y: 169709,  label: "Uttar Pradesh" },
+               { y: 158400,  label: "Rajastan" },
+               { y: 142503,  label: "Jammu" },
+               { y: 101500, label: "Tamil Nadu" },
+               { y: 97800,  label: "Himachalpradesh" },
+               { y: 400878,  label: "kerla" }
+          ]
+     }]
+});
+chart.render();
+
+}
+</script>
+</head>
+<body>
+<div id="chartContainer" style="height: 370px; width: 100%;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</body>
+</html>
